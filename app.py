@@ -52,6 +52,11 @@ def list_messages():
 @app.route("/api/messages", methods=["POST"])
 def create_messages():
     # TODO: Validate existing payload
+    # {
+    #   "message": "" // required
+    #   "type": "" // required
+    #   "payload": {} // optional
+    # }
     data = request.json
 
     if "payload" in data and not FeatureFlags.get("PAYLOAD_ENABLED"):
