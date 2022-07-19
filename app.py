@@ -3,7 +3,7 @@ import sqlite3
 from os import getenv
 from flask import Flask, request, g
 
-from featureflag import FeatureFlags
+from .featureflag import FeatureFlags
 
 app = Flask(__name__)
 
